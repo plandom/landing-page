@@ -61,7 +61,7 @@
         });
 
 
-        function allConsentGranted() {
+        export function allConsentGranted() {
             gtag('consent', 'update', {
               'ad_user_data': 'granted',
               'ad_personalization': 'granted',
