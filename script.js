@@ -80,7 +80,6 @@ gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=Google tag ID';
 var firstScript = document.getElementsByTagName('script')[0];
 firstScript.parentNode.insertBefore(gtagScript, firstScript);
 
-
 function allConsentGranted() {
     gtag('consent', 'update', {
         'ad_user_data': 'granted',
