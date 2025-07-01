@@ -48,3 +48,14 @@
         document.querySelectorAll('.feature-card').forEach((card, index) => {
             card.style.animationDelay = `${index * 0.1}s`;
         });
+
+        window.addEventListener('load', () => {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').style.display = 'block';
+            }
+            document.getElementById('accept-cookies').addEventListener('click', () => {
+                localStorage.setItem('cookiesAccepted', 'true');
+                document.getElementById('cookie-banner').style.display = 'none';
+            });
+        });
+        

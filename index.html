@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Your Dream Home</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WYW0E9ERFH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-WYW0E9ERFH');
+    </script>
 </head>
 
 <script>
@@ -172,5 +180,38 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <div id="cookie-banner" style="
+         position: fixed;
+         bottom: 20px;
+         left: 20px;
+         right: 20px;
+         max-width: 800px;
+         margin: 0 auto;
+         background: rgba(255, 255, 255, 0.95);
+         backdrop-filter: blur(10px);
+         color: #333;
+         padding: 15px 20px;
+         border-radius: 15px;
+         box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+         font-size: 14px;
+         display: none;
+         z-index: 9999;
+         text-align: center;
+     ">
+         By continuing to use this site, you consent to the processing of your data and cookies.
+         <a href="#privacy" style="color: #667eea; text-decoration: underline;">More info</a>.
+         <button id="accept-cookies" style="
+             margin-left: 15px;
+             background: linear-gradient(135deg, #667eea, #764ba2);
+             color: white;
+             border: none;
+             padding: 7px 15px;
+             border-radius: 50px;
+             cursor: pointer;
+             font-weight: 600;
+             transition: all 0.3s ease;
+         ">Accept</button>
+     </div>
+
 </body>
 </html>
