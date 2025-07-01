@@ -54,11 +54,31 @@ window.addEventListener('load', () => {
         document.getElementById('cookie-banner').style.display = 'block';
     }
     document.getElementById('accept-cookies').addEventListener('click', () => {
-        allConsentGranted()
+
+        localStorage.setItem("consentGranted", "true");
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('consent', 'update', {
+            ad_user_data: 'granted',
+            ad_personalization: 'granted',
+            ad_storage: 'granted',
+            analytics_storage: 'granted'
+        });
+
         localStorage.setItem('cookiesAccepted', 'true');
         document.getElementById('cookie-banner').style.display = 'none';
     });
 });
+
+var gtagScript = document.createElement('script');
+gtagScript.async = true;
+gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=Google tag ID';
+
+var firstScript = document.getElementsByTagName('script')[0];
+firstScript.parentNode.insertBefore(gtagScript, firstScript);
 
 
 function allConsentGranted() {

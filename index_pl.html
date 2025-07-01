@@ -9,14 +9,16 @@
         <!-- Blokada domyślna - odrzucenie wszystkich zgód -->
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag() {dataLayer.push(arguments);}
-
+            function gtag() { dataLayer.push(arguments); }
             gtag('consent', 'default', {
-                'ad_storage': 'denied',
                 'ad_user_data': 'denied',
                 'ad_personalization': 'denied',
-                'analytics_storage': 'denied'
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'wait_for_update': 500,
             });
+            gtag('js', new Date());
+            gtag('config', 'G-WYW0E9ERFH');
         </script>
 
         <!-- Google tag (gtag.js) -->
