@@ -1,217 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Your Dream Home</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WYW0E9ERFH"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Dream Home</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Google tag (gtag.js) -->
+
+        <!-- Blokada domyślna - odrzucenie wszystkich zgód -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {dataLayer.push(arguments);}
+
+            gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            });
+        </script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WYW0E9ERFH"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {dataLayer.push(arguments);}
+
+            gtag('js', new Date());
+            gtag('config', 'G-WYW0E9ERFH');
+        </script>
+
+    </head>
+
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-WYW0E9ERFH');
-    </script>
-</head>
-
-<script>
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.startsWith('pl')) {
-        window.location.href = 'index_pl.html';
-    }
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('pl')) {
+            window.location.href = 'index_pl.html';
+        }
     </script>
 
-<body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">PlanDom</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="index.html">EN</a></li>
-                <li><a href="index_pl.html">PL</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Design Your Dream Home</h1>
-            <p>Professional-quality house plans instantly generated from your parcel. Visualize, customize, and export your build-ready design — all online.</p>
-            <a href="#process" class="cta-button">Start Designing</a>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process" id="process">
-        <div class="container">
-            <h2 class="section-title fade-in">How It Works</h2>
-            <div class="process-grid">
-                <div class="process-card fade-in">
-                    <div class="process-number">1</div>
-                    <h3>Select Your Parcel</h3>
-                    <p>Use our map integration to choose your land.</p>
-                </div>
-                <div class="process-card fade-in">
-                    <div class="process-number">2</div>
-                    <h3>Instant Design Generation</h3>
-                    <p>Get a buildable house plan optimized for your parcel shape, orientation, and local conditions.</p>
-                </div>
-                <div class="process-card fade-in">
-                    <div class="process-number">3</div>
-                    <h3>Customize & Preview</h3>
-                    <p>Adjust size, layout, and modules to match your lifestyle and budget.</p>
-                </div>
-                <div class="process-card fade-in">
-                    <div class="process-number">4</div>
-                    <h3>Export Your Plan</h3>
-                    <p>Download professional visualiztion, high-quality PDF documentaion or CAD files ready for construction — or send them to a local builder.</p>
-                </div>
+    <body>
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="nav-container">
+                <div class="logo">PlanDom</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html">EN</a></li>
+                    <li><a href="index_pl.html">PL</a></li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </nav>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title fade-in">Bring your creativity and build sustainable home of your dreams</h2>
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🗺️</div>
-                    <div class="feature-content">
-                        <h3>Land-Aware Design</h3>
-                        <p>Select any parcel in Poland and get instant house designs tailored to your land's specific requirements, orientation, and regulations.</p>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Design Your Dream Home</h1>
+                <p>Professional-quality house plans instantly generated from your parcel. Visualize, customize, and export your build-ready design — all online.</p>
+                <a href="#process" class="cta-button">Start Designing</a>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process" id="process">
+            <div class="container">
+                <h2 class="section-title fade-in">How It Works</h2>
+                <div class="process-grid">
+                    <div class="process-card fade-in">
+                        <div class="process-number">1</div>
+                        <h3>Select Your Parcel</h3>
+                        <p>Use our map integration to choose your land.</p>
                     </div>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🤖</div>
-                    <div class="feature-content">
-                        <h3>Parametric Automation</h3>
-                        <p>Professional-grade house plans generated instantly using advanced parametric design. No architect needed - get buildable plans in minutes.</p>
+                    <div class="process-card fade-in">
+                        <div class="process-number">2</div>
+                        <h3>Instant Design Generation</h3>
+                        <p>Get a buildable house plan optimized for your parcel shape, orientation, and local conditions.</p>
                     </div>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🌿</div>
-                    <div class="feature-content">
-                        <h3>Regenerative Materials</h3>
-                        <p>Eco-friendly construction with sustainable materials like eco-cocoon. Climate-friendly housing that maximizes renewable energy potential.</p>
+                    <div class="process-card fade-in">
+                        <div class="process-number">3</div>
+                        <h3>Customize & Preview</h3>
+                        <p>Adjust size, layout, and modules to match your lifestyle and budget.</p>
                     </div>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">⚡</div>
-                    <div class="feature-content">
-                        <h3>Energy Optimization</h3>
-                        <p>Smart designs that harness wind and solar potential of your parcel. Combat energy poverty with superior thermal isolation and efficiency.</p>
-                    </div>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🧩</div>
-                    <div class="feature-content">
-                        <h3>Modular System</h3>
-                        <p>Wide selection of prefabricated eco-modules. Easily extendable designs that grow with your needs over the years.</p>
-                    </div>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">💡</div>
-                    <div class="feature-content">
-                        <h3>No Expertise Required</h3>
-                        <p>Professional results without architectural knowledge. Visualize and customize your buildable house before spending thousands on traditional plans.</p>
+                    <div class="process-card fade-in">
+                        <div class="process-number">4</div>
+                        <h3>Export Your Plan</h3>
+                        <p>Download professional visualiztion, high-quality PDF documentaion or CAD files ready for construction — or send them to a local builder.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Stats / Pricing Section -->
-    <section class="stats">
-        <div class="container">
-            <h2 class="fade-in">Flexible Pricing, Made for Everyone</h2>
-            <div class="stats-grid">
-                <div class="stat-item fade-in">
-                    <h2>1 Design</h2>
-                    <p>Free for Unregistered Users</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <h2>3 Designs</h2>
-                    <p>Free with Registration</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <h2>Design Coins</h2>
-                    <p>Buy More Designs Anytime</p>
-                </div>
-                <div class="stat-item fade-in">
-                    <h2>Pro Export</h2>
-                    <p>Pay Once for a Professional Plan</p>
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title fade-in">Bring your creativity and build sustainable home of your dreams</h2>
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🗺️</div>
+                        <div class="feature-content">
+                            <h3>Land-Aware Design</h3>
+                            <p>Select any parcel in Poland and get instant house designs tailored to your land's specific requirements, orientation, and regulations.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🤖</div>
+                        <div class="feature-content">
+                            <h3>Parametric Automation</h3>
+                            <p>Professional-grade house plans generated instantly using advanced parametric design. No architect needed - get buildable plans in minutes.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🌿</div>
+                        <div class="feature-content">
+                            <h3>Regenerative Materials</h3>
+                            <p>Eco-friendly construction with sustainable materials like eco-cocoon. Climate-friendly housing that maximizes renewable energy potential.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-content">
+                            <h3>Energy Optimization</h3>
+                            <p>Smart designs that harness wind and solar potential of your parcel. Combat energy poverty with superior thermal isolation and efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">🧩</div>
+                        <div class="feature-content">
+                            <h3>Modular System</h3>
+                            <p>Wide selection of prefabricated eco-modules. Easily extendable designs that grow with your needs over the years.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">💡</div>
+                        <div class="feature-content">
+                            <h3>No Expertise Required</h3>
+                            <p>Professional results without architectural knowledge. Visualize and customize your buildable house before spending thousands on traditional plans.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <!-- Final CTA -->
-    <section class="final-cta" id="contact">
-        <div class="container">
-            <h2 class="fade-in">Ready to Start Your Journey?</h2>
-            <p class="fade-in">Enter your email to get started with your first free house plan preview.</p>
-            <form class="fade-in" action="#" method="post">
-                <input type="email" name="email" placeholder="Enter your email" required class="email-input">
-                <button type="submit" class="cta-button-black">Sign up</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
-                <a href="#privacy">Privacy Policy</a>
+        <!-- Stats / Pricing Section -->
+        <section class="stats">
+            <div class="container">
+                <h2 class="fade-in">Flexible Pricing, Made for Everyone</h2>
+                <div class="stats-grid">
+                    <div class="stat-item fade-in">
+                        <h2>1 Design</h2>
+                        <p>Free for Unregistered Users</p>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <h2>3 Designs</h2>
+                        <p>Free with Registration</p>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <h2>Design Coins</h2>
+                        <p>Buy More Designs Anytime</p>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <h2>Pro Export</h2>
+                        <p>Pay Once for a Professional Plan</p>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2024 PlanDom All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
-    <div id="cookie-banner" style="
-         position: fixed;
-         bottom: 20px;
-         left: 20px;
-         right: 20px;
-         max-width: 800px;
-         margin: 0 auto;
-         background: rgba(255, 255, 255, 0.95);
-         backdrop-filter: blur(10px);
-         color: #333;
-         padding: 15px 20px;
-         border-radius: 15px;
-         box-shadow: 0 5px 25px rgba(0,0,0,0.2);
-         font-size: 14px;
-         display: none;
-         z-index: 9999;
-         text-align: center;
-     ">
-         By continuing to use this site, you consent to the processing of your data and cookies.
-         <a href="#privacy" style="color: #667eea; text-decoration: underline;">More info</a>.
-         <button id="accept-cookies" style="
-             margin-left: 15px;
-             background: linear-gradient(135deg, #667eea, #764ba2);
-             color: white;
-             border: none;
-             padding: 7px 15px;
-             border-radius: 50px;
-             cursor: pointer;
-             font-weight: 600;
-             transition: all 0.3s ease;
-         ">Accept</button>
-     </div>
+        </section>
 
-</body>
+
+        <!-- Final CTA -->
+        <section class="final-cta" id="contact">
+            <div class="container">
+                <h2 class="fade-in">Ready to Start Your Journey?</h2>
+                <p class="fade-in">Enter your email to get started with your first free house plan preview.</p>
+                <form class="fade-in" action="#" method="post">
+                    <input type="email" name="email" placeholder="Enter your email" required class="email-input">
+                    <button type="submit" class="cta-button-black">Sign up</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+                <p>&copy; 2024 PlanDom All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+        <div id="cookie-banner" style="
+position: fixed;
+bottom: 20px;
+left: 20px;
+right: 20px;
+max-width: 800px;
+margin: 0 auto;
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+color: #333;
+padding: 15px 20px;
+border-radius: 15px;
+box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+font-size: 14px;
+display: none;
+z-index: 9999;
+text-align: center;
+             ">
+            By continuing to use this site, you consent to the processing of your data and cookies.
+            <a href="#privacy" style="color: #667eea; text-decoration: underline;">More info</a>.
+            <button id="accept-cookies" style="
+margin-left: 15px;
+background: linear-gradient(135deg, #667eea, #764ba2);
+color: white;
+border: none;
+padding: 7px 15px;
+border-radius: 50px;
+cursor: pointer;
+font-weight: 600;
+transition: all 0.3s ease;
+                    ">Accept</button>
+        </div>
+
+    </body>
 </html>
