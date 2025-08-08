@@ -22,35 +22,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-});
-
-// Add staggered animation delays
-document.querySelectorAll('.process-card').forEach((card, index) => {
-    card.style.animationDelay = `${index * 0.1}s`;
-});
-
-document.querySelectorAll('.feature-card').forEach((card, index) => {
-    card.style.animationDelay = `${index * 0.1}s`;
-});
-
-// Cookie consent handling
+// Language selection handling
 window.addEventListener('load', () => {
+    const userLang = navigator.language || navigator.userLanguage;
+    const languageBanner = document.getElementById('language-banner');
+
+    // Show language banner for Polish users if they haven't made a choice before
+    if (userLang.startsWith('pl') && !localStorage.getItem('languageChoice')) {
+        languageBanner.style.display = 'block';
+        // Adjust navbar position when banner is shown
+        document.getElementById('navbar').style.top = '50px';
+    }
+
+    // Handle language choice buttons
+    document.getElementById('choose-english').addEventListener('click', () => {
+        localStorage.setItem('languageChoice', 'en');
+        languageBanner.style.display = 'none';
+        document.getElementById('navbar').style.top = '0';
+    });
+
+    document.getElementById('choose-polish').addEventListener('click', () => {
+        localStorage.setItem('languageChoice', 'pl');
+        window.location.href = 'index_pl.html';
+    });
+
+    document.getElementById('close-language-banner').addEventListener('click', () => {
+        localStorage.setItem('languageChoice', 'dismissed');
+        languageBanner.style.display = 'none';
+        document.getElementById('navbar').style.top = '0';
+    });
+
+    // Cookie consent handling
     if (!localStorage.getItem('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
     }
@@ -90,4 +92,31 @@ window.addEventListener('load', () => {
         localStorage.setItem('cookiesAccepted', 'rejected');
         document.getElementById('cookie-banner').style.display = 'none';
     });
+});
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+});
+
+// Add staggered animation delays
+document.querySelectorAll('.process-card').forEach((card, index) => {
+    card.style.animationDelay = `${index * 0.1}s`;
+});
+
+document.querySelectorAll('.feature-card').forEach((card, index) => {
+    card.style.animationDelay = `${index * 0.1}s`;
 });
