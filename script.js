@@ -49,33 +49,45 @@ document.querySelectorAll('.feature-card').forEach((card, index) => {
     card.style.animationDelay = `${index * 0.1}s`;
 });
 
+// Cookie consent handling
 window.addEventListener('load', () => {
     if (!localStorage.getItem('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
     }
-    document.getElementById('accept-cookies').addEventListener('click', () => {
 
+    // Accept cookies button
+    document.getElementById('accept-cookies').addEventListener('click', () => {
         localStorage.setItem("consentGranted", "true");
 
-        function gtag() {
-            dataLayer.push(arguments);
+        // Update Google Analytics consent
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted'
+            });
         }
-
-        gtag('consent', 'update', {
-            ad_user_data: 'granted',
-            ad_personalization: 'granted',
-            ad_storage: 'granted',
-            analytics_storage: 'granted'
-        });
 
         localStorage.setItem('cookiesAccepted', 'true');
         document.getElementById('cookie-banner').style.display = 'none';
     });
+
+    // Reject non-essential cookies button
+    document.getElementById('reject-cookies').addEventListener('click', () => {
+        localStorage.setItem("consentGranted", "false");
+
+        // Keep analytics denied for non-essential rejection
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied'
+            });
+        }
+
+        localStorage.setItem('cookiesAccepted', 'rejected');
+        document.getElementById('cookie-banner').style.display = 'none';
+    });
 });
-
-var gtagScript = document.createElement('script');
-gtagScript.async = true;
-gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=Google tag ID';
-
-var firstScript = document.getElementsByTagName('script')[0];
-firstScript.parentNode.insertBefore(gtagScript, firstScript);

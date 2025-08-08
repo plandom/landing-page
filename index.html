@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Design Your Dream Home</title>
         <link rel="stylesheet" href="style.css">
-        <!-- Google tag (gtag.js) -->
 
-        <!-- Blokada domyślna - odrzucenie wszystkich zgód -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WYW0E9ERFH"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
@@ -79,7 +79,7 @@
                     <div class="process-card fade-in">
                         <div class="process-number">4</div>
                         <h3>Export Your Plan</h3>
-                        <p>Download professional visualiztion, high-quality PDF documentaion or CAD files ready for construction — or send them to a local builder.</p>
+                        <p>Download professional visualization, high-quality PDF documentation or CAD files ready for construction — or send them to a local builder.</p>
                     </div>
                 </div>
             </div>
@@ -182,7 +182,8 @@
                     <a href="#services">Services</a>
                     <a href="#portfolio">Portfolio</a>
                     <a href="#contact">Contact</a>
-                    <a href="#privacy">Privacy Policy</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
                 </div>
                 <p>&copy; 2024 PlanDom All rights reserved.</p>
             </div>
@@ -206,10 +207,11 @@ display: none;
 z-index: 9999;
 text-align: center;
              ">
-            By continuing to use this site, you consent to the processing of your data and cookies.
-            <a href="#privacy" style="color: #667eea; text-decoration: underline;">More info</a>.
-            <button id="accept-cookies" style="
-margin-left: 15px;
+            We use cookies to improve your experience and for analytics. By continuing to use this site, you consent to our use of cookies and data processing as described in our
+            <a href="privacy.html" style="color: #667eea; text-decoration: underline;">Privacy Policy</a>.
+            <div style="margin-top: 10px;">
+                <button id="accept-cookies" style="
+margin-right: 10px;
 background: linear-gradient(135deg, #667eea, #764ba2);
 color: white;
 border: none;
@@ -218,7 +220,18 @@ border-radius: 50px;
 cursor: pointer;
 font-weight: 600;
 transition: all 0.3s ease;
-                    ">Accept</button>
+                    ">Accept All</button>
+                <button id="reject-cookies" style="
+background: transparent;
+color: #333;
+border: 1px solid #ccc;
+padding: 7px 15px;
+border-radius: 50px;
+cursor: pointer;
+font-weight: 600;
+transition: all 0.3s ease;
+                    ">Reject Non-Essential</button>
+            </div>
         </div>
 
     </body>
