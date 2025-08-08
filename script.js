@@ -120,3 +120,27 @@ document.querySelectorAll('.process-card').forEach((card, index) => {
 document.querySelectorAll('.feature-card').forEach((card, index) => {
     card.style.animationDelay = `${index * 0.1}s`;
 });
+
+document.getElementById('email-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Stop the default form submission (the redirect)
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors' // Crucial for Google Forms, as they don't allow cross-origin requests by default
+    })
+        .then(() => {
+            // Optional: Provide user feedback after successful submission
+            alert("Thank you for signing up!");
+            // Optional: Clear the form
+            form.reset();
+        })
+        .catch(error => {
+            // Optional: Handle errors
+            console.error('Error submitting form:', error);
+            alert("There was an error. Please try again later.");
+        });
+});
